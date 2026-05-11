@@ -1,0 +1,222 @@
+{
+  "app": {
+    "title": "InfraTrack",
+    "tagline": "Inteligencia de flota de código abierto para maquinaria pesada."
+  },
+  "nav": {
+    "controlPanel": "Panel de control",
+    "assetManagement": "Gestión de activos",
+    "telemetry": "Telemetría y seguimiento",
+    "reportsAnalytics": "Informes y analítica",
+    "performance": "Optimización y rendimiento",
+    "configuration": "Configuración y soporte"
+  },
+  "common": {
+    "searchPlaceholder": "Buscar por ID, placa o…",
+    "emergency": "Emergencia",
+    "notifications": "Notificaciones",
+    "user": "Usuario",
+    "logout": "Cerrar sesión",
+    "breadcrumbHome": "Inicio",
+    "language": "Idioma",
+    "demoEmergency": "Canal de emergencia activado (demo).",
+    "demoSearch": "La búsqueda se conectará al backend en una iteración posterior."
+  },
+  "login": {
+    "title": "Iniciar sesión",
+    "subtitle": "Usa tus credenciales para acceder a la consola InfraTrack.",
+    "username": "Usuario",
+    "usernameHint": "En esta demo basta un valor no vacío.",
+    "password": "Contraseña",
+    "submit": "Ingresar",
+    "errorRequired": "Ingresa un usuario para continuar."
+  },
+  "footer": {
+    "notice": "InfraTrack — Proyecto académico open source (UPC)."
+  },
+  "controlPanel": {
+    "title": "Panel de control",
+    "intro": "Vista centralizada del estado de la flota y alertas críticas de combustible.",
+    "kpis": {
+      "activeMachines": "Máquinas activas",
+      "fuelAlerts": "Alertas de combustible",
+      "idleMachines": "Máquinas en ralentí",
+      "efficiencyRate": "Tasa de eficiencia"
+    },
+    "map": {
+      "title": "Resumen de seguimiento GPS",
+      "legendActive": "Activo",
+      "legendWarning": "Advertencia",
+      "legendIdle": "Inactivo",
+      "hint": "Desplázate y haz zoom en el mapa. Pulsa un marcador para ver la unidad. Datos © OpenStreetMap.",
+      "markers": {
+        "activeTitle": "Excavadora EX-02",
+        "activeBody": "Activo · Combustible 78% · Obra A",
+        "warningTitle": "Cargador LD-07",
+        "warningBody": "Advertencia · Temperatura de motor alta · Obra D",
+        "idleTitle": "Bulldozer BD-03",
+        "idleBody": "Inactivo · Estacionado 42 min · Patio B"
+      }
+    },
+    "alerts": {
+      "title": "Alertas recientes",
+      "time": "Tiempo",
+      "machine": "Máquina",
+      "alertType": "Tipo de alerta",
+      "severity": "Gravedad",
+      "status": "Estado"
+    },
+    "severity": {
+      "warning": "Advertencia",
+      "critical": "Crítico"
+    },
+    "status": {
+      "active": "Activo",
+      "resolved": "Resuelto"
+    }
+  },
+  "assetManagement": {
+    "title": "Gestión de activos",
+    "intro": "Registro de maquinaria, evidencia fotográfica, nodos IoT y especificaciones técnicas.",
+    "fleetTable": "Máquinas de la flota",
+    "table": {
+      "id": "ID",
+      "machine": "Máquina",
+      "status": "Estado",
+      "fuel": "Combustible",
+      "location": "Ubicación"
+    },
+    "machineStatus": {
+      "active": "Activo",
+      "warning": "Advertencia",
+      "idle": "Inactivo",
+      "resolved": "Resuelto"
+    },
+    "fuelLevel": {
+      "high": "Alto",
+      "medium": "Medio",
+      "low": "Bajo",
+      "warning": "Advertencia"
+    },
+    "pagination": {
+      "summary": "Mostrando {{from}} – {{to}} de {{total}} máquinas"
+    }
+  },
+  "telemetry": {
+    "title": "Telemetría y seguimiento",
+    "intro": "GPS en vivo, variación de combustible y horas motor con histórico comparativo.",
+    "sensors": {
+      "fuelLevel": "Nivel de combustible",
+      "engineTemp": "Temp. motor",
+      "rpm": "RPM",
+      "battery": "Batería"
+    },
+    "chart": {
+      "title": "Telemetría en tiempo real",
+      "fuelSeries": "Combustible %",
+      "tempSeries": "Temp. °C",
+      "batterySeries": "Batería %",
+      "hint": "Pasa el cursor sobre los puntos para ver valores. Pulsa la leyenda para mostrar u ocultar cada serie.",
+      "axisPercent": "Porcentaje",
+      "axisTemp": "Temperatura (°C)"
+    },
+    "timeline": {
+      "title": "Línea de tiempo de alertas",
+      "description": "Descripción",
+      "time": "Hora",
+      "status": "Estado",
+      "severity": "Gravedad"
+    },
+    "severity": {
+      "info": "Info",
+      "warning": "Advertencia",
+      "critical": "Crítico"
+    },
+    "status": {
+      "active": "Activo",
+      "resolved": "Resuelto"
+    }
+  },
+  "reports": {
+    "title": "Informes y analítica",
+    "intro": "Compara uso de flota, mezcla de alertas y tendencias de eficiencia. Los filtros solo afectan al conjunto de datos demo.",
+    "export": {
+      "pdf": "Exportar PDF",
+      "excel": "Exportar Excel",
+      "demoPdf": "La exportación PDF se conectará a la API de informes más adelante.",
+      "demoExcel": "La exportación Excel se conectará a la API de informes más adelante."
+    },
+    "filters": {
+      "dateRange": "Rango de fechas",
+      "project": "Proyecto",
+      "machine": "Máquina",
+      "optLast7": "Últimos 7 días",
+      "optLast30": "Últimos 30 días",
+      "optLast90": "Últimos 90 días",
+      "optAllProjects": "Todos los proyectos",
+      "optProjectA": "Proyecto Alfa",
+      "optProjectB": "Proyecto Beta",
+      "optAllMachines": "Todas las máquinas",
+      "optExcavators": "Solo excavadoras",
+      "optLoaders": "Solo cargadores"
+    },
+    "charts": {
+      "fleetTitle": "Horas de flota por mes",
+      "statusTitle": "Distribución del estado de la flota",
+      "weeklyTitle": "Tendencia de eficiencia (semanal)",
+      "trendTitle": "Volumen de alertas por gravedad",
+      "excavators": "Excavadoras",
+      "loaders": "Cargadores",
+      "cranes": "Grúas",
+      "monthJan": "Ene",
+      "monthFeb": "Feb",
+      "monthMar": "Mar",
+      "monthApr": "Abr",
+      "statusActive": "Activo",
+      "statusIdle": "Inactivo",
+      "statusMaintenance": "Mantenimiento",
+      "statusOffline": "Fuera de línea",
+      "efficiencySeries": "Índice de eficiencia",
+      "severityCritical": "Crítico",
+      "severityWarning": "Advertencia",
+      "severityInfo": "Info",
+      "alertVolume": "Volumen de alertas"
+    },
+    "period": {
+      "title": "Resumen del periodo",
+      "totalFuel": "Combustible total usado",
+      "avgEfficiency": "Eficiencia media",
+      "activeHours": "Horas activas",
+      "alertsResolved": "Alertas resueltas",
+      "costSavings": "Ahorro estimado"
+    }
+  },
+  "performance": {
+    "title": "Optimización y rendimiento",
+    "intro": "Perfiles de operadores, ralentí excesivo y rankings de eficiencia energética.",
+    "metrics": {
+      "idleShare": "Participación de ralentí excesivo",
+      "topOperator": "Eficiencia del mejor operador",
+      "fuelDelta": "Variación de combustible vs. plan"
+    },
+    "actions": {
+      "simulate": "Simular nueva muestra de ranking"
+    }
+  },
+  "configuration": {
+    "title": "Configuración y soporte",
+    "intro": "Cuenta, alertas críticas de robo y documentación del hardware open source.",
+    "sections": {
+      "notifications": "Notificaciones críticas",
+      "docs": "Documentación de hardware"
+    },
+    "toggles": {
+      "theftAlerts": "Alertas de robo / caída brusca de combustible",
+      "emailDigest": "Resumen diario por correo"
+    },
+    "links": {
+      "iotGuide": "Guía de nodo IoT abierto (PDF placeholder)",
+      "support": "Contactar soporte"
+    }
+  }
+}

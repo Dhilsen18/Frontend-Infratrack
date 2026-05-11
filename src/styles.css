@@ -1,1 +1,208 @@
-/* You can add global styles to this file, and also import other style files */
+/* ——— InfraTrack: tokens de diseño ——— */
+:root {
+  --it-app-bg: #eef1f6;
+  --it-surface: #ffffff;
+  --it-surface-muted: #f8fafc;
+  --it-border: #e2e8f0;
+  --it-text: #0f172a;
+  --it-text-secondary: #475569;
+  --it-text-muted: #64748b;
+  --it-nav-bg: #1e293b;
+  --it-nav-bg-elevated: #243146;
+  --it-nav-text: #f1f5f9;
+  --it-nav-text-muted: #cbd5e1;
+  --it-nav-icon: #94a3b8;
+  --it-nav-hover: rgba(255, 255, 255, 0.08);
+  --it-nav-active-bg: rgba(234, 179, 8, 0.22);
+  --it-nav-active-border: #eab308;
+  --it-shadow-sm: 0 1px 2px rgba(15, 23, 42, 0.06);
+  --it-shadow-md: 0 4px 16px rgba(15, 23, 42, 0.08);
+  --it-shadow-lg: 0 12px 40px rgba(15, 23, 42, 0.12);
+  --it-radius: 12px;
+  --it-radius-sm: 8px;
+}
+
+/* ——— Sidenav: contraste alto (Material MDC lista) ——— */
+mat-sidenav.shell__nav {
+  --mat-sidenav-content-background-color: var(--it-nav-bg);
+  border-inline-end: 1px solid rgba(255, 255, 255, 0.06);
+  box-shadow: 4px 0 32px rgba(15, 23, 42, 0.18);
+}
+
+mat-sidenav.shell__nav .mat-drawer-inner-container {
+  background: var(--it-nav-bg);
+}
+
+mat-sidenav.shell__nav .mat-mdc-list-item:not(.shell__link--active) .mdc-list-item__primary-text {
+  color: var(--it-nav-text-muted) !important;
+}
+
+mat-sidenav.shell__nav .mat-mdc-list-item:not(.shell__link--active) .mat-mdc-list-item-icon,
+mat-sidenav.shell__nav .mat-mdc-list-item:not(.shell__link--active) mat-icon {
+  color: var(--it-nav-icon) !important;
+}
+
+mat-sidenav.shell__nav .mat-mdc-list-item.shell__link--active {
+  background: var(--it-nav-active-bg) !important;
+  border-inline-start: 3px solid var(--it-nav-active-border);
+}
+
+mat-sidenav.shell__nav .mat-mdc-list-item.shell__link--active .mdc-list-item__primary-text {
+  color: var(--it-nav-text) !important;
+  font-weight: 600;
+}
+
+mat-sidenav.shell__nav .mat-mdc-list-item.shell__link--active .mat-mdc-list-item-icon,
+mat-sidenav.shell__nav .mat-mdc-list-item.shell__link--active mat-icon {
+  color: #facc15 !important;
+}
+
+mat-sidenav.shell__nav .mat-mdc-list-item:hover:not(.shell__link--active) {
+  background-color: var(--it-nav-hover) !important;
+}
+
+mat-sidenav.shell__nav .mat-mdc-list-item:hover:not(.shell__link--active) .mdc-list-item__primary-text {
+  color: var(--it-nav-text) !important;
+}
+
+mat-sidenav.shell__nav .mat-mdc-list-item:hover:not(.shell__link--active) mat-icon {
+  color: var(--it-nav-text-muted) !important;
+}
+
+/* ——— Login: interruptor de idioma sobre barra oscura ——— */
+.login-toolbar .lang-switch.mat-button-toggle-group {
+  border-color: rgba(255, 255, 255, 0.2);
+}
+
+.login-toolbar .lang-switch .mat-button-toggle {
+  color: var(--it-nav-text-muted);
+}
+
+.login-toolbar .lang-switch .mat-button-toggle-checked {
+  color: var(--it-nav-text);
+  background: rgba(255, 255, 255, 0.12);
+}
+
+.shell__toolbar .lang-switch.mat-button-toggle-group {
+  border-color: var(--it-border);
+  background: var(--it-surface-muted);
+}
+
+.shell__toolbar .lang-switch .mat-button-toggle {
+  color: var(--it-text-secondary);
+}
+
+.shell__toolbar .lang-switch .mat-button-toggle-checked {
+  color: var(--it-text);
+  background: var(--it-surface);
+  font-weight: 600;
+}
+
+/* ——— Login: campos Material legibles ——— */
+app-login-page .login-card .mat-mdc-form-field,
+app-login-page .login-card .mat-mdc-floating-label,
+app-login-page .login-card .mdc-floating-label--float-above {
+  color: var(--it-text-secondary);
+}
+
+app-login-page .login-card .mat-mdc-input-element {
+  color: var(--it-text);
+  caret-color: var(--mat-sys-primary);
+}
+
+/* ——— Tarjetas y tablas en área principal ——— */
+.it-elevated-card.mat-mdc-card {
+  border-radius: var(--it-radius);
+  border: 1px solid var(--it-border);
+  box-shadow: var(--it-shadow-sm);
+}
+
+.it-page-title {
+  margin: 0;
+  font-size: 1.375rem;
+  font-weight: 600;
+  letter-spacing: -0.02em;
+  color: var(--it-text);
+}
+
+.it-page-intro {
+  margin: 0;
+  max-width: 52rem;
+  color: var(--it-text-secondary);
+  line-height: 1.55;
+  font-size: 0.9375rem;
+}
+
+.it-section-title {
+  margin: 0.75rem 0 0;
+  font-size: 1rem;
+  font-weight: 600;
+  color: var(--it-text);
+  letter-spacing: -0.01em;
+}
+
+/* ——— Contenido principal: tarjetas Material ——— */
+.shell__content .mat-mdc-card {
+  border-radius: var(--it-radius);
+  border: 1px solid var(--it-border);
+  box-shadow: var(--it-shadow-sm);
+  background: var(--it-surface);
+}
+
+.shell__content .mat-mdc-card-header {
+  padding: 1rem 1.25rem 0;
+}
+
+.shell__content .mat-mdc-card-title {
+  font-size: 1rem;
+  font-weight: 600;
+  color: var(--it-text);
+}
+
+.shell__content .mat-mdc-card-content {
+  padding: 0 1.25rem 1.25rem;
+  color: var(--it-text-secondary);
+}
+
+.shell__content table.mat-mdc-table {
+  background: transparent;
+}
+
+.shell__content .mat-mdc-header-row {
+  background: var(--it-surface-muted);
+}
+
+.shell__content .mat-mdc-header-cell {
+  color: var(--it-text);
+  font-weight: 600;
+  font-size: 0.75rem;
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+}
+
+/* Mapa Leaflet dentro de tarjeta: no recortar controles/tiles */
+.shell__content .map-card .mat-mdc-card-content {
+  overflow: visible;
+}
+
+/* ——— Leaflet + map popups ——— */
+.leaflet-container {
+  font-family: Roboto, 'Helvetica Neue', sans-serif;
+  background: #dfe7ef;
+  outline: none;
+}
+
+.leaflet-tile-pane img.leaflet-tile {
+  max-width: none !important;
+}
+
+.it-map-popup {
+  min-width: 140px;
+  line-height: 1.45;
+  color: var(--it-text);
+}
+
+.it-map-popup__body {
+  font-size: 0.8125rem;
+  color: var(--it-text-secondary);
+}

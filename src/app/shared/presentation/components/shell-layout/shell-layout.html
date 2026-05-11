@@ -1,0 +1,56 @@
+<mat-sidenav-container class="shell">
+  <mat-sidenav class="shell__nav" [opened]="sidenavOpen()" mode="side" [fixedInViewport]="true">
+    <div class="shell__brand">
+      <img class="shell__logo" src="imagen/logo_infratrack-sinfondo.png" alt="" />
+      <span class="shell__title">{{ 'app.title' | translate }}</span>
+    </div>
+    <mat-nav-list>
+      @for (item of navItems; track item.path) {
+        <mat-list-item
+          (click)="navigate(item.path)"
+          [class.shell__link--active]="isActive(item.path)"
+        >
+          <mat-icon matListItemIcon>{{ item.icon }}</mat-icon>
+          <span matListItemTitle>{{ item.labelKey | translate }}</span>
+        </mat-list-item>
+      }
+    </mat-nav-list>
+  </mat-sidenav>
+
+  <mat-sidenav-content class="shell__main">
+    <mat-toolbar class="shell__toolbar">
+      <button type="button" mat-icon-button (click)="toggleSidenav()" aria-label="Menu">
+        <mat-icon>menu</mat-icon>
+      </button>
+      <div class="shell__crumb">
+        <span class="muted">{{ 'common.breadcrumbHome' | translate }}</span>
+        <span class="sep">›</span>
+        <span>{{ sectionNavKey() | translate }}</span>
+      </div>
+      <span class="spacer"></span>
+      <form class="shell__search" (ngSubmit)="submitSearch()">
+        <mat-form-field appearance="outline" subscriptSizing="dynamic" class="shell__search-field">
+          <mat-label>{{ 'common.searchPlaceholder' | translate }}</mat-label>
+          <input matInput name="q" [(ngModel)]="searchQuery" />
+        </mat-form-field>
+      </form>
+      <button mat-flat-button color="warn" type="button" (click)="emergency()">
+        {{ 'common.emergency' | translate }}
+      </button>
+      <button mat-icon-button type="button" [attr.aria-label]="'common.notifications' | translate">
+        <mat-icon>notifications_none</mat-icon>
+      </button>
+      <app-language-switcher />
+      <div class="shell__user">
+        <span class="shell__avatar" aria-hidden="true"></span>
+        <span>{{ iam.username() ?? ('common.user' | translate) }}</span>
+      </div>
+      <button mat-button type="button" (click)="logout()">{{ 'common.logout' | translate }}</button>
+    </mat-toolbar>
+
+    <div class="shell__content">
+      <router-outlet />
+    </div>
+    <app-footer />
+  </mat-sidenav-content>
+</mat-sidenav-container>

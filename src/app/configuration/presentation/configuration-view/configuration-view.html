@@ -1,0 +1,34 @@
+<section class="page">
+  <h1 class="it-page-title">{{ 'configuration.title' | translate }}</h1>
+  <p class="it-page-intro">{{ 'configuration.intro' | translate }}</p>
+
+  <mat-card>
+    <mat-card-header>
+      <mat-card-title>{{ 'configuration.sections.notifications' | translate }}</mat-card-title>
+    </mat-card-header>
+    <mat-card-content class="stack">
+      <mat-slide-toggle
+        [checked]="store.theftDropAlertsEnabled()"
+        (change)="onTheftToggle($event.checked)"
+      >
+        {{ 'configuration.toggles.theftAlerts' | translate }}
+      </mat-slide-toggle>
+      <mat-slide-toggle
+        [checked]="store.dailyEmailDigestEnabled()"
+        (change)="onDigestToggle($event.checked)"
+      >
+        {{ 'configuration.toggles.emailDigest' | translate }}
+      </mat-slide-toggle>
+    </mat-card-content>
+  </mat-card>
+
+  <mat-card>
+    <mat-card-header>
+      <mat-card-title>{{ 'configuration.sections.docs' | translate }}</mat-card-title>
+    </mat-card-header>
+    <mat-card-content class="links">
+      <a mat-button href="#" (click)="$event.preventDefault()">{{ 'configuration.links.iotGuide' | translate }}</a>
+      <a mat-button href="#" (click)="$event.preventDefault()">{{ 'configuration.links.support' | translate }}</a>
+    </mat-card-content>
+  </mat-card>
+</section>

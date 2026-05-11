@@ -1,0 +1,40 @@
+.page {
+  display: flex;
+  flex-direction: column;
+  gap: 1.25rem;
+}
+
+.actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+}
+
+.metric-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 1rem;
+}
+
+.metric-grid > .mat-mdc-card {
+  border-radius: var(--it-radius) !important;
+  border: 1px solid var(--it-border) !important;
+  background: var(--it-surface) !important;
+  box-shadow: var(--it-shadow-sm) !important;
+}
+
+.metric-value {
+  margin: 0.25rem 0 0;
+  font-size: 1.75rem;
+  font-weight: 700;
+  letter-spacing: -0.03em;
+  color: var(--it-text);
+}
+
+.metric-grid .mat-mdc-card-title {
+  font-size: 0.8125rem !important;
+  font-weight: 600 !important;
+  color: var(--it-text-muted) !important;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+}

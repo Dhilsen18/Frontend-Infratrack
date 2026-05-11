@@ -1,0 +1,57 @@
+<section class="page">
+  <h1 class="it-page-title">{{ 'assetManagement.title' | translate }}</h1>
+  <p class="it-page-intro">{{ 'assetManagement.intro' | translate }}</p>
+
+  <mat-card class="table-card">
+    <mat-card-header>
+      <mat-card-title>{{ 'assetManagement.fleetTable' | translate }}</mat-card-title>
+    </mat-card-header>
+    <mat-card-content>
+      <table mat-table [dataSource]="store.page()" class="fleet-table">
+        <ng-container matColumnDef="machineId">
+          <th mat-header-cell *matHeaderCellDef>{{ 'assetManagement.table.id' | translate }}</th>
+          <td mat-cell *matCellDef="let row">{{ row.machineId }}</td>
+        </ng-container>
+        <ng-container matColumnDef="machineName">
+          <th mat-header-cell *matHeaderCellDef>{{ 'assetManagement.table.machine' | translate }}</th>
+          <td mat-cell *matCellDef="let row">{{ row.machineName }}</td>
+        </ng-container>
+        <ng-container matColumnDef="operationalStatus">
+          <th mat-header-cell *matHeaderCellDef>{{ 'assetManagement.table.status' | translate }}</th>
+          <td mat-cell *matCellDef="let row">
+            <span [class]="'pill pill--' + row.operationalStatus">
+              {{ 'assetManagement.machineStatus.' + row.operationalStatus | translate }}
+            </span>
+          </td>
+        </ng-container>
+        <ng-container matColumnDef="fuelLevel">
+          <th mat-header-cell *matHeaderCellDef>{{ 'assetManagement.table.fuel' | translate }}</th>
+          <td mat-cell *matCellDef="let row">
+            <span [class]="'pill pill--fuel-' + row.fuelLevel">
+              {{ 'assetManagement.fuelLevel.' + row.fuelLevel | translate }}
+            </span>
+          </td>
+        </ng-container>
+        <ng-container matColumnDef="locationLabel">
+          <th mat-header-cell *matHeaderCellDef>{{ 'assetManagement.table.location' | translate }}</th>
+          <td mat-cell *matCellDef="let row">{{ row.locationLabel }}</td>
+        </ng-container>
+        <tr mat-header-row *matHeaderRowDef="columns"></tr>
+        <tr mat-row *matRowDef="let row; columns: columns"></tr>
+      </table>
+      <mat-paginator
+        [length]="store.totalCount"
+        [pageIndex]="store.pageIndexValue()"
+        [pageSize]="store.pageSizeValue()"
+        [pageSizeOptions]="[5, 10, 25]"
+        (page)="onPage($event)"
+      />
+      <p class="range">
+        {{
+          'assetManagement.pagination.summary'
+            | translate: { from: store.range().from, to: store.range().to, total: store.range().total }
+        }}
+      </p>
+    </mat-card-content>
+  </mat-card>
+</section>

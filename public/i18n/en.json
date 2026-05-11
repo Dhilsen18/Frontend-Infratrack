@@ -1,0 +1,222 @@
+{
+  "app": {
+    "title": "InfraTrack",
+    "tagline": "Open-source fleet intelligence for heavy machinery."
+  },
+  "nav": {
+    "controlPanel": "Control Panel",
+    "assetManagement": "Asset Management",
+    "telemetry": "Telemetry & Tracking",
+    "reportsAnalytics": "Reports & Analytics",
+    "performance": "Optimization & Performance",
+    "configuration": "Configuration & Support"
+  },
+  "common": {
+    "searchPlaceholder": "Search by ID, plate or…",
+    "emergency": "Emergency",
+    "notifications": "Notifications",
+    "user": "User",
+    "logout": "Sign out",
+    "breadcrumbHome": "Home",
+    "language": "Language",
+    "demoEmergency": "Emergency channel activated (demo).",
+    "demoSearch": "Search will be wired to the backend in a later iteration."
+  },
+  "login": {
+    "title": "Sign in",
+    "subtitle": "Use your credentials to access the InfraTrack console.",
+    "username": "Username",
+    "usernameHint": "Any non-empty value is accepted in this demo.",
+    "password": "Password",
+    "submit": "Enter",
+    "errorRequired": "Enter a username to continue."
+  },
+  "footer": {
+    "notice": "InfraTrack — Open Source academic project (UPC)."
+  },
+  "controlPanel": {
+    "title": "Control Panel",
+    "intro": "Centralized view of fleet health and critical fuel alerts.",
+    "kpis": {
+      "activeMachines": "Active machines",
+      "fuelAlerts": "Fuel alerts",
+      "idleMachines": "Idle machines",
+      "efficiencyRate": "Efficiency rate"
+    },
+    "map": {
+      "title": "GPS tracking overview",
+      "legendActive": "Active",
+      "legendWarning": "Warning",
+      "legendIdle": "Idle",
+      "hint": "Pan and zoom the map. Click a marker for unit details. Map data © OpenStreetMap contributors.",
+      "markers": {
+        "activeTitle": "Excavator EX-02",
+        "activeBody": "Active · Fuel 78% · Site A",
+        "warningTitle": "Loader LD-07",
+        "warningBody": "Warning · Engine temp. elevated · Site D",
+        "idleTitle": "Bulldozer BD-03",
+        "idleBody": "Idle · Parked 42 min · Yard B"
+      }
+    },
+    "alerts": {
+      "title": "Recent alerts",
+      "time": "Time",
+      "machine": "Machine",
+      "alertType": "Alert type",
+      "severity": "Severity",
+      "status": "Status"
+    },
+    "severity": {
+      "warning": "Warning",
+      "critical": "Critical"
+    },
+    "status": {
+      "active": "Active",
+      "resolved": "Resolved"
+    }
+  },
+  "assetManagement": {
+    "title": "Asset Management",
+    "intro": "Register machinery, attach evidence, link IoT nodes and technical specs.",
+    "fleetTable": "Fleet machines",
+    "table": {
+      "id": "ID",
+      "machine": "Machine",
+      "status": "Status",
+      "fuel": "Fuel",
+      "location": "Location"
+    },
+    "machineStatus": {
+      "active": "Active",
+      "warning": "Warning",
+      "idle": "Idle",
+      "resolved": "Resolved"
+    },
+    "fuelLevel": {
+      "high": "High",
+      "medium": "Medium",
+      "low": "Low",
+      "warning": "Warning"
+    },
+    "pagination": {
+      "summary": "Showing {{from}} – {{to}} of {{total}} machines"
+    }
+  },
+  "telemetry": {
+    "title": "Telemetry & Tracking",
+    "intro": "Live GPS, fuel variation and engine hours with historical comparison.",
+    "sensors": {
+      "fuelLevel": "Fuel level",
+      "engineTemp": "Engine temp.",
+      "rpm": "RPM",
+      "battery": "Battery"
+    },
+    "chart": {
+      "title": "Real-time telemetry",
+      "fuelSeries": "Fuel %",
+      "tempSeries": "Temp °C",
+      "batterySeries": "Battery %",
+      "hint": "Hover points for exact values. Click legend items to show or hide each series.",
+      "axisPercent": "Percent",
+      "axisTemp": "Temperature (°C)"
+    },
+    "timeline": {
+      "title": "Alert timeline",
+      "description": "Description",
+      "time": "Time",
+      "status": "Status",
+      "severity": "Severity"
+    },
+    "severity": {
+      "info": "Info",
+      "warning": "Warning",
+      "critical": "Critical"
+    },
+    "status": {
+      "active": "Active",
+      "resolved": "Resolved"
+    }
+  },
+  "reports": {
+    "title": "Reports & Analytics",
+    "intro": "Compare fleet utilization, alert mix and efficiency trends. Filters apply to the demo dataset only.",
+    "export": {
+      "pdf": "Export PDF",
+      "excel": "Export Excel",
+      "demoPdf": "PDF export will connect to the reporting API later.",
+      "demoExcel": "Excel export will connect to the reporting API later."
+    },
+    "filters": {
+      "dateRange": "Date range",
+      "project": "Project",
+      "machine": "Machine",
+      "optLast7": "Last 7 days",
+      "optLast30": "Last 30 days",
+      "optLast90": "Last 90 days",
+      "optAllProjects": "All projects",
+      "optProjectA": "Project Alpha",
+      "optProjectB": "Project Beta",
+      "optAllMachines": "All machines",
+      "optExcavators": "Excavators only",
+      "optLoaders": "Loaders only"
+    },
+    "charts": {
+      "fleetTitle": "Fleet hours by month",
+      "statusTitle": "Fleet status distribution",
+      "weeklyTitle": "Efficiency trend (weekly)",
+      "trendTitle": "Alert volume by severity",
+      "excavators": "Excavators",
+      "loaders": "Loaders",
+      "cranes": "Cranes",
+      "monthJan": "Jan",
+      "monthFeb": "Feb",
+      "monthMar": "Mar",
+      "monthApr": "Apr",
+      "statusActive": "Active",
+      "statusIdle": "Idle",
+      "statusMaintenance": "Maintenance",
+      "statusOffline": "Offline",
+      "efficiencySeries": "Efficiency index",
+      "severityCritical": "Critical",
+      "severityWarning": "Warning",
+      "severityInfo": "Info",
+      "alertVolume": "Alert volume"
+    },
+    "period": {
+      "title": "Period summary",
+      "totalFuel": "Total fuel used",
+      "avgEfficiency": "Avg. efficiency",
+      "activeHours": "Active hours",
+      "alertsResolved": "Alerts resolved",
+      "costSavings": "Cost savings"
+    }
+  },
+  "performance": {
+    "title": "Optimization & Performance",
+    "intro": "Operator profiles, idle-time insights and energy-efficiency rankings.",
+    "metrics": {
+      "idleShare": "Excessive idle share",
+      "topOperator": "Top operator efficiency",
+      "fuelDelta": "Fuel variance vs. plan"
+    },
+    "actions": {
+      "simulate": "Simulate new ranking sample"
+    }
+  },
+  "configuration": {
+    "title": "Configuration & Support",
+    "intro": "Account, critical theft alerts and open hardware documentation.",
+    "sections": {
+      "notifications": "Critical notifications",
+      "docs": "Hardware documentation"
+    },
+    "toggles": {
+      "theftAlerts": "Theft / sudden fuel-drop alerts",
+      "emailDigest": "Daily email digest"
+    },
+    "links": {
+      "iotGuide": "Open IoT node setup (PDF placeholder)",
+      "support": "Contact support"
+    }
+  }
+}
